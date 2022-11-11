@@ -30,7 +30,7 @@ const Signup=()=>{
 
     const handleSubmit=(e)=>{
         e.preventDefault()
-        axios.post('http://localhost:8080/authentication/signup',userData).then(res=>{
+        axios.post('https://userlistadrixus.herokuapp.com/authentication/signup',userData).then(res=>{
             setUserData({
                     firstName:'',
                     lastName:'',

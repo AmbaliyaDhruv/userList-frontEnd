@@ -55,7 +55,7 @@ const DashBoard=()=>{
     }
    
    useEffect(()=>{
-      axios.get('http://localhost:8080/dashboard').then((res)=>{
+      axios.get('https://userlistadrixus.herokuapp.com/dashboard').then((res)=>{
           totalPage.current=calTotalPage(res.data.length)
           setData(res.data)
           setArraylist(page,res.data)
@@ -113,7 +113,7 @@ const DashBoard=()=>{
         <TextField id='email' type="email" style={{width:'180px'}} value={search} label="Search" onChange={(e)=>handleChange(e,'search')} placeholder="Find Name"  variant="outlined" />
        </Box>
       <Table sx={{ minWidth: 650,width:'80%',margin:'auto',marginTop: '20px',border:'1px solid gainsboro'}} aria-label="simple table">
-        <TableHead>
+        <TableHead sx={{backgroundColor:'gainsboro'}}>
           <TableRow>
             <TableCell>First Name</TableCell>
             <TableCell>Last Name</TableCell>
